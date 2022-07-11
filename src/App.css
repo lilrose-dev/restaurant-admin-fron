@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  margin: 0;
+  max-width: 1330px;
+  display: flex;
+  padding: 0;
+}
+
+.menu{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  /* padding-left: 15px; */
+}
+
+.heading{
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700;
+  font-size: 36px;
+  padding: 0 10px 0 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.link{
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
+  font-size: 19px;
+  color: #fff;
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.link:hover{
+  background: #646e8096;
+}
+
+.link:active{
+  background-color: #ef9921a8;
+}
+
+.left{
+  display: block;
+  width: 300px;
+  margin: 0;
+  color: #fff;
+  border-right: 1px solid white;
+  background-color: #424B5C;
+  min-height: 700px;
+}
+
+.link_dashboard::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/layout.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}
+
+.link_category::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/category.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}
+
+.link_restaurant::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/restaurant2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}
+
+.link_branch::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/branch3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}
+
+.link_food::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/food3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}
+
+.link_order::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/img/order-food2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: #ef9921a8;
+  margin-right: 10px;
+}

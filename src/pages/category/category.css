@@ -1,0 +1,96 @@
+.wrapper{
+    width: 1300px;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+    margin-left: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+table{
+    width: 1040px;
+    margin-top: 20px;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+thead{
+    color: #000;
+    font-weight: 500;
+    background-color: #ef9921a8;
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+td {
+    padding: 9px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.buttons{
+    margin: 0;
+    max-width: 180px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.buttonsEdit{
+    margin: 0;
+    max-width: 220px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.sbmtBtn {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.basketBtn{
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: #7d7dcc;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.editbtn{
+    border: none;
+    background-color: transparent;
+}
+
+.delbtn{
+    border: none;
+    background-color: transparent;
+}
+
+h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.piechart{
+    display: block;
+}
+
+.linegraph{
+    /* width: '100%'; */
+    /* height: 300  */
+}
