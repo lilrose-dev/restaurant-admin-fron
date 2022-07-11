@@ -71,7 +71,6 @@ function Category() {
             }
         });
         alert('New category is added!')
-        navigate('/', {replace: true})
     }
 
 
@@ -82,7 +81,6 @@ function Category() {
                 name: catEditName
             }
         })
-        navigate('/', {replace: true})
     }
 
     const handleDel = (ID) => {
@@ -91,7 +89,6 @@ function Category() {
                 id: ID
             }
         });
-        navigate('/', {replace: true})
     }
 
     return(<>
