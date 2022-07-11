@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from '@apollo/client'
 import { CATEGORY, NEW_CATEGORY, EDIT_CATEGORY, DEL_CATEGORY } from '../../Query';
 import './category.css'
@@ -13,6 +14,8 @@ import DelBtn from '../../assets/img/delete.png'
 
 
 function Category() {
+
+    const navigate = useNavigate()
 
     const [ show, setShow ] = useState(false)
     const [ showEdit, setShowEdit] = useState(false)
@@ -68,6 +71,7 @@ function Category() {
             }
         });
         alert('New category is added!')
+        navigate('/', {replace: true})
     }
 
 
@@ -78,6 +82,7 @@ function Category() {
                 name: catEditName
             }
         })
+        navigate('/', {replace: true})
     }
 
     const handleDel = (ID) => {
@@ -85,7 +90,8 @@ function Category() {
             variables: {
                 id: ID
             }
-        })
+        });
+        navigate('/', {replace: true})
     }
 
     return(<>

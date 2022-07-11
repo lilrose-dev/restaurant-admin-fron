@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from '@apollo/client'
 import { BRANCH, FOOD, NEW_FOOD, DEL_FOOD, EDIT_FOOD } from '../../Query';
 import '../category/category.css'
@@ -12,7 +13,7 @@ import DelBtn from '../../assets/img/delete.png'
 
 
 function Food() {
-
+    const navigate = useNavigate()
     const [ show, setShow ] = useState(false)
     const [ showEdit, setShowEdit] = useState(false)
     const [ showDel, setShowDel] = useState(false)
@@ -69,7 +70,8 @@ function Food() {
                 price: foodPrice.current.value -0
             }
         });
-        alert('New food is added!')
+        alert('New food is added!');
+        navigate('/', {replace: true})
     }
 
 
@@ -80,7 +82,8 @@ function Food() {
                 id: Number(ID),
                 name: foodEditName.current.value
             }
-        })
+        });
+        navigate('/', {replace: true})
     }
 
     const handleDelete = (ID) => {
@@ -89,6 +92,7 @@ function Food() {
                 id: ID
             }
         })
+        navigate('/', {replace: true})
     }
 
 

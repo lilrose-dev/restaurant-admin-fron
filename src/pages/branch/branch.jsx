@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from '@apollo/client'
 import { BRANCH, RESTAURANT, NEW_BRANCH, DEL_BRANCH, EDIT_BRANCH } from '../../Query';
 import '../category/category.css'
@@ -12,6 +13,8 @@ import DelBtn from '../../assets/img/delete.png'
 
 
 function Branch() {
+
+    const navigate = useNavigate()
 
     const [ show, setShow ] = useState(false)
     const [ showEdit, setShowEdit] = useState(false)
@@ -68,6 +71,7 @@ function Branch() {
             }
         });
         alert('New branch is added!')
+        navigate('/', {replace: true})
     }
  
     const handleDelete = (ID) => {
@@ -76,6 +80,7 @@ function Branch() {
                 id: ID
             }
         });
+        navigate('/', {replace: true})
     }
 
 
@@ -89,6 +94,7 @@ function Branch() {
             }
         });
         alert('Branch is updated')
+        navigate('/', {replace: true})
     }
 
 

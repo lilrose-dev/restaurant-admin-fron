@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from '@apollo/client'
 import { DEL_ORDER, ORDER } from '../../Query';
 import '../category/category.css'
@@ -11,7 +12,7 @@ import DelBtn from '../../assets/img/delete.png'
 
 
 function Order() {
-
+    const navigate = useNavigate()
     const [ show, setShow ] = useState(false)
     const [ showEdit, setShowEdit] = useState(false)
     const [ showDel, setShowDel] = useState(false)
@@ -47,6 +48,7 @@ function Order() {
                 id: ID
             }
         })
+        navigate('/order', {replace: true})
     }
 
 

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation } from '@apollo/client'
 import { RESTAURANT, CATEGORY, NEW_RESTAURANT, EDIT_RES, DEL_RESTAURANT } from '../../Query';
 import '../category/category.css'
@@ -7,7 +8,6 @@ import Modal from 'react-bootstrap/Modal';
 import { InputGroup } from 'react-bootstrap';
 import EditBtn from './../../assets/img/edit2.png'
 import DelBtn from '../../assets/img/delete.png'
-
 
 
 
@@ -20,7 +20,7 @@ function Restaurants() {
     const { data, isLoading } = useQuery(RESTAURANT);
     const { data: category } = useQuery(CATEGORY)
 
-    const resNameRef = useRef()
+    const resNameRef = useRef() 
     const resEditName = useRef()
     const resCatID = useRef()
      
@@ -67,7 +67,7 @@ function Restaurants() {
                 catID: resCatID.current.value
             }
         });
-        alert('New restaurant is added!')
+        alert('New restaurant is added!');
     }
 
 
